@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id" itemscope itemtype="https://schema.org/WebPage">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Daftar Kasus - Sherlock Holmes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header container-fluid">
+      <div class="container">
+        <img src="logo.png" alt="Logo Sherlock Holmes" class="logo" />
+        <h1>Daftar Kasus Sherlock Holmes</h1>
+      </div>
+    </header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar -->
+        <nav class="col-md-3 sidebar">
+          <a href="index.html">Halaman Utama</a>
+          <a href="form.html">Formulir</a>
+          <a href="tabel.html">Tabel Kasus</a>
+        </nav>
+
+        <!-- Konten Utama -->
+        <main class="col-md-9">
+          <div class="container">
+            <h2>Kasus-Kasus Terkenal</h2>
+            <div class="table-container">
+              <table class="table table-bordered">
+                <thead class="thead-dark">
+                  <tr>
+                    <th>No.</th>
+                    <th>Judul Kasus</th>
+                    <th>Tahun</th>
+                    <th>Lokasi</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Data Dummy -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer container-fluid bg-dark text-white mt-4">
+      <div class="container">
+        <p class="text-center">&copy; 2023 Penggemar Sherlock Holmes</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Script untuk mengisi tabel dengan data dummy -->
+    <script>
+      const tbody = document.querySelector("tbody");
+      for (let i = 1; i <= 50; i++) {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${i}</td>
+          <td>Kasus Misterius ${i}</td>
+          <td>${1880 + (i % 20)}</td>
+          <td>London</td>
+          <td>${i % 2 === 0 ? "Selesai" : "Belum Selesai"}</td>
+        `;
+        tbody.appendChild(tr);
+      }
+    </script>
+  </body>
+</html>

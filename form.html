@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id" itemscope itemtype="https://schema.org/WebPage">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formulir Penggemar - Sherlock Holmes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header container-fluid">
+      <div class="container">
+        <img src="logo.png" alt="Logo Sherlock Holmes" class="logo" />
+        <h1>Formulir Penggemar Sherlock Holmes</h1>
+      </div>
+    </header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar -->
+        <nav class="col-md-3 sidebar">
+          <a href="index.html">Halaman Utama</a>
+          <a href="form.html">Formulir</a>
+          <a href="tabel.html">Tabel Kasus</a>
+        </nav>
+
+        <!-- Konten Utama -->
+        <main class="col-md-9">
+          <div class="container">
+            <h2>Daftar Sebagai Penggemar</h2>
+            <form method="GET" action="submit.html">
+              <div class="form-group">
+                <label for="nama">Nama Lengkap *</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nama"
+                  name="nama"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="tgl_lahir">Tanggal Lahir</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="tgl_lahir"
+                  name="tgl_lahir"
+                />
+              </div>
+              <div class="form-group">
+                <label for="cerita_favorit">Cerita Favorit</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cerita_favorit"
+                  name="cerita_favorit"
+                />
+              </div>
+              <div class="form-group">
+                <label>Jenis Kelamin *</label><br />
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="jenis_kelamin"
+                    id="laki"
+                    value="Laki-Laki"
+                    required
+                  />
+                  <label class="form-check-label" for="laki">Laki-Laki</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="jenis_kelamin"
+                    id="perempuan"
+                    value="Perempuan"
+                  />
+                  <label class="form-check-label" for="perempuan"
+                    >Perempuan</label
+                  >
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="newsletter">Newsletter</label>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="newsletter"
+                    name="newsletter"
+                    value="Ya"
+                  />
+                  <label class="form-check-label" for="newsletter"
+                    >Saya ingin menerima newsletter</label
+                  >
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Kirim</button>
+            </form>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer container-fluid">
+      <div class="container">
+        <p>&copy; 2023 Penggemar Sherlock Holmes</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
