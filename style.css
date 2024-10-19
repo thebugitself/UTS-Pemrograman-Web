@@ -1,10 +1,51 @@
+/* Perbaikan Umum */
 body {
-  background-color: #f2f2f2; /* Warna krem khas Sherlock Holmes */
+  background-color: #f2f2f2;
+  font-family: "Roboto", sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.header,
+.footer {
+  background-color: #819b9d;
+  color: #fff;
+  padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.logo {
+  max-width: 100px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.sherlock-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sherlock-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .sidebar {
-  background-color: #1e2c35; /* Warna coklat muda */
+  background-color: #1e2c35;
   min-height: 100vh;
+  transition: background-color 0.3s ease;
 }
 
 .sidebar a {
@@ -12,46 +53,26 @@ body {
   display: block;
   padding: 15px;
   text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .sidebar a:hover {
-  background-color: #506063; /* Warna coklat tua */
+  background-color: #506063;
+  transform: translateX(5px);
 }
 
-.header,
-.footer {
-  background-color: #819b9d; /* Warna coklat sedang */
-  color: #fff;
-  padding: 20px;
+.table-container {
+  max-height: 400px;
+  overflow-y: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
 }
 
-.container {
-  padding: 20px;
+.table-container:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.logo {
-  max-width: 100px;
-}
-
-.sherlock-image {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 20px auto; /* Menyelaraskan gambar di tengah */
-}
-
-@media (max-width: 576px) {
-  .sidebar {
-    min-height: auto;
-  }
-}
-
-/* Tambahan CSS untuk halaman formulir */
-.form-group label {
-  font-weight: bold;
-}
-
-/* Tambahan CSS untuk halaman tabel */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -64,19 +85,66 @@ thead th {
   color: #fff;
 }
 
+tbody tr {
+  transition: background-color 0.3s ease;
+}
+
 tbody tr:nth-child(even) {
-  background-color: #f0e68c; /* Warna kuning muda */
+  background-color: #f0e68c;
 }
 
 tbody tr:nth-child(odd) {
-  background-color: #fffacd; /* Warna krem */
+  background-color: #fffacd;
 }
 
 tbody tr:hover {
-  background-color: #ffe4b5; /* Warna krem lebih gelap */
+  background-color: #ffe4b5;
 }
 
-.table-container {
-  max-height: 400px;
-  overflow-y: auto;
+.form-group label {
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #deb887;
+  box-shadow: 0 0 5px rgba(222, 184, 135, 0.5);
+}
+
+button.btn-primary {
+  background-color: #506063;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.btn-primary:hover {
+  background-color: #819b9d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar {
+    min-height: auto;
+  }
+
+  .header,
+  .footer {
+    text-align: center;
+  }
 }
